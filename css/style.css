@@ -7,6 +7,8 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+    /* Add padding to account for fixed header */
 }
 
 body {
@@ -75,11 +77,12 @@ header {
     padding: 10px 0;
     position: relative;
     color: #333;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.2s;
 }
 
 .main-menu li a:hover, .main-menu li a.active {
     color: #ff6600;
+    transform: translateY(-2px);
 }
 
 .main-menu li a.active::after {
@@ -770,6 +773,23 @@ footer {
 
 .section-bounce {
     animation: sectionBounce 1s ease;
+}
+
+/* CSS-only section targeting for bounce effect */
+section:target {
+    animation: sectionBounce 1s ease;
+}
+
+/* Active menu item styles */
+.main-menu li a:active {
+    color: #ff6600;
+}
+
+/* Logo click effect */
+.logo a:active img, .footer-logo a:active img {
+    opacity: 0.8;
+    transform: scale(0.98);
+    transition: all 0.1s ease;
 }
 
 /* Responsive Styles */
