@@ -233,7 +233,6 @@ header {
     border-radius: 5px;
     display: inline-block;
     margin-bottom: 15px;
-    animation: pulse 2s infinite;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
