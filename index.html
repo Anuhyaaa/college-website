@@ -11,6 +11,19 @@
     />
   </head>
   <body>
+    <!-- CSS-only scroll detector - no JavaScript needed -->
+    <div
+      class="scroll-detector"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 50px;
+        z-index: -1;
+        pointer-events: none;
+      "
+    ></div>
     <!-- Header Section -->
     <header>
       <div class="main-header">
@@ -23,6 +36,10 @@
               />
             </a>
           </div>
+          <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+          <label for="menu-toggle" class="menu-icon">
+            <i class="fas fa-bars"></i>
+          </label>
           <nav>
             <ul class="main-menu">
               <li><a href="#hero" class="active">ADMISSIONS</a></li>
